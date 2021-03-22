@@ -99,7 +99,7 @@ const App = () => {
           exact
           render={(props) => (
             <>
-              {showAddTask && <AddTask onAdd={addTask} />}
+              {showAddTask && <AddTask onAdd={addTask}  showAdd={showAddTask} inAdd={()=>setShowAddTask(!showAddTask)} />}
               {tasks.length > 0 ? (
                 <Tasks
                   tasks={tasks}
